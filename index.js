@@ -25,6 +25,7 @@ app.use(cors({
   methods: ['GET', 'POST', 'OPTIONS'],
   credentials: true
 }));
+app.options('*', cors());
 
 // JWT_SECRET
 const Jwt_Token = process.env.JWT_SECRET
