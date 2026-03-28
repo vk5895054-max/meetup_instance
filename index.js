@@ -21,7 +21,7 @@ app.use(cors({
   //     : 'app://./' ,// Electron production
 
   // curl -i -X OPTIONS http://localhost:3000/ -H "Origin: http://localhost:5173
-  origin: ['https://meetup-a9pb.vercel.app'],
+  origin: ['https://meetup-735x.vercel.app'],
   methods: ['GET', 'POST', 'OPTIONS'],
   credentials: true
 }));
@@ -216,7 +216,7 @@ app.get('/frnd-req/:senderId', authMiddleware, async (req, res) => {
     receiver.friends.includes(senderId)
   ) {
     // return res.redirect('http://localhost:5173/chats');
-    return res.redirect('https://meetup-a9pb.vercel.app/chats');
+    return res.redirect('https://meetup-735x.vercel.app/chats');
   }
 
   // Add friend request
@@ -227,7 +227,7 @@ app.get('/frnd-req/:senderId', authMiddleware, async (req, res) => {
   await sender.save();
 
   // return res.redirect('http://localhost:5173/chats');
-  return res.redirect('https://meetup-a9pb.vercel.app');
+  return res.redirect('https://meetup-735x.vercel.app');
 });
 
 
@@ -535,7 +535,7 @@ const server = createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ['https://meetup-a9pb.vercel.app'],
+    origin: ['https://meetup-735x.vercel.app'],
     methods: ["GET", "POST"],
     credentials: true
   }
